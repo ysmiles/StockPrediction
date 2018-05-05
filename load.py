@@ -18,7 +18,8 @@ def save_histograms(data):
         plt.title(feature_name)
         plt.savefig('img/histogram/' + feature_name + '.png')
         # plt.show()
-        plt.close()
+        plt.clf()  # clear figure but leave figure opened
+        # plt.close()  # close the window
         # i += 1
         # if i == 2:
         #     break
