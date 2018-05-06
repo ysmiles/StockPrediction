@@ -8,6 +8,7 @@ test_csv = pandas.read_csv('data/test_2.csv', index_col=0)
 
 train_X = train_csv.drop(train_csv.columns[range(146, 210)], axis=1).values
 
+
 for i in range(62):  # t=121 to 180, and D+1, D+2
     if i == 60:
         name_of_column = 'Ret_PlusOne'
@@ -24,7 +25,7 @@ for i in range(62):  # t=121 to 180, and D+1, D+2
 
     test_X = test_csv.values
 
-    # training and predict logic
+    # training and predict logics
     # model.train()
     # pred = model.predict()
 
@@ -32,7 +33,8 @@ for i in range(62):  # t=121 to 180, and D+1, D+2
         output_data.append(
             {'Id': str(stock_id + 1) + '_' + str(i), 'Predicted': val})
 
+
 output = pandas.DataFrame(data=output_data)
 output.sort_values(by='Id', inplace=True)
-print(output.head())
+# print(output.head())
 output.to_csv(path_or_buf='data/output.csv', index=False)
