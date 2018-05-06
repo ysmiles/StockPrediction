@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 # print(pd.__version__)
 
-def loaddata(ratio=0.05):
-    data = pd.read_csv('data/train.csv', index_col=0, nrows=int(ratio * 40000))
+def loaddata(filename='train.csv', ratio=0.05):
+    data = pd.read_csv('data/' + filename, index_col=0, nrows=int(ratio * 40000))
     return data
 
 
@@ -25,6 +25,6 @@ def save_histograms(data):
         #     break
 
 
-data = loaddata(1.0)
+# data = loaddata(ratio=1.0)
 
 # save_histograms(data)
