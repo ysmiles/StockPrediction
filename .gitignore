@@ -103,3 +103,5 @@ ENV/
 *.csv
 *.png
 .vscode
+
+.DS_Store
