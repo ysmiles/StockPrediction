@@ -1,0 +1,269 @@
+PS C:\Users\yuge9\mysrc\StockPrediction> python RNN.py
+test rets shape  (120000, 121)
+WARNING:tensorflow:From C:\Users\yuge9\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+2018-05-07 21:51:40.276035: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2018-05-07 21:51:40.439920: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1344] Found device 0 with properties:
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.86
+pciBusID: 0000:01:00.0
+totalMemory: 8.00GiB freeMemory: 6.60GiB
+2018-05-07 21:51:40.445472: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-05-07 21:51:40.947608: I T:\s2018-05-07 21:51:40.952372: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:917]      0
+2018-05-07 21:51:40.954744: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:930] 0:   N
+2018-05-07 21:51:40.956754: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6380 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+getting
+x_batch with size (400, 119, 1)
+y_batch with size (400, 119, 1)
+getting
+x_batch with size (1, 119, 1)
+y_batch with size (1, 119, 1)
+test rets shape  (120000, 121)
+prepare to save data
+finish to save data
+PS C:\Users\yuge9\mysrc\StockPrediction> python RNN.py
+test rets shape  (120000, 121)
+WARNING:tensorflow:From C:\Users\yuge9\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+2018-05-07 22:00:46.018927: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2018-05-07 22:00:46.185677: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1344] Found device 0 with properties:
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.86
+pciBusID: 0000:01:00.0
+totalMemory: 8.00GiB freeMemory: 6.60GiB
+2018-05-07 22:00:46.190785: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-05-07 22:00:46.677239: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-05-07 22:00:46.681222: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:917]      0
+2018-05-07 22:00:46.682866: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device2018-05-07 22:00:46.692265: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6380 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+getting
+x_batch with size (400, 119, 1)
+y_batch with size (400, 119, 1)
+getting
+x_batch with size (1, 119, 1)
+y_batch with size (1, 119, 1)
+test rets shape  (120000, 121)
+prepare to save data
+finish to save data
+PS C:\Users\yuge9\mysrc\StockPrediction> python RNN.py
+test rets shape  (120000, 121)
+WARNING:tensorflow:From C:\Users\yuge9\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+2018-05-07 22:07:19.186672: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2018-05-07 22:07:19.352526: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1344] Found device 0 with properties:
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.86
+pciBusID: 0000:01:00.0
+totalMemory: 8.00GiB freeMemory: 6.60GiB
+2018-05-07 22:07:19.356688: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-05-07 22:07:19.833484: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-05-07 22:07:19.836864: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:917]      0
+2018-05-07 22:07:19.838852018-05-07 22:07:19.846736: I T:\src\github\tensorflow\tensorflow\core\common_runtime\gpu\gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6380 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+getting
+x_batch with size (400, 119, 1)
+y_batch with size (400, 119, 1)
+after 100 epochs        MSE: 2272526.198319328
+after 200 epochs        MSE: 1826790.1848739495
+after 300 epochs        MSE: 1602365.1818487393
+after 400 epochs        MSE: 1419304.2715966385
+after 500 epochs        MSE: 1273926.3892436975
+after 600 epochs        MSE: 1132455.5401680672
+after 700 epochs        MSE: 1019478.5667226891
+after 800 epochs        MSE: 953004.6171428572
+after 900 epochs        MSE: 895637.8998319327
+after 1000 epochs       MSE: 803530.5626890756
+after 1100 epochs       MSE: 787516.4934453781
+after 1200 epochs       MSE: 710149.0769747898
+after 1300 epochs       MSE: 654451.6087394957
+after 1400 epochs       MSE: 631922.3610084034
+after 1500 epochs       MSE: 615164.0847058824
+after 1600 epochs       MSE: 566800.9519327731
+after 1700 epochs       MSE: 528943.6719327731
+after 1800 epochs       MSE: 526809.1482352942
+after 1900 epochs       MSE: 478908.45042016805
+after 2000 epochs       MSE: 449543.2282352941
+after 2100 epochs       MSE: 464102.44302521006
+after 2200 epochs       MSE: 418687.3546218488
+after 2300 epochs       MSE: 427076.065882353
+after 2400 epochs       MSE: 390992.84436974785
+after 2500 epochs       MSE: 388955.72974789917
+after 2600 epochs       MSE: 372043.5092436975
+after 2700 epochs       MSE: 341351.3465546219
+after 2800 epochs       MSE: 345436.8053781513
+after 2900 epochs       MSE: 338783.0857142857
+after 3000 epochs       MSE: 301197.25176470587
+after 3100 epochs       MSE: 497543.142184874
+after 3200 epochs       MSE: 303419.2026890756
+after 3300 epochs       MSE: 372592.29579831933
+after 3400 epochs       MSE: 281376.5700840336
+after 3500 epochs       MSE: 350634.2722689076
+after 3600 epochs       MSE: 259129.20201680672
+after 3700 epochs       MSE: 268750.4349579832
+after 3800 epochs       MSE: 242694.69042016807
+after 3900 epochs       MSE: 241023.05344537814
+after 4000 epochs       MSE: 227826.59764705884
+after 4100 epochs       MSE: 230169.47092436973
+after 4200 epochs       MSE: 228427.85344537813
+after 4300 epochs       MSE: 227760.61848739497
+after 4400 epochs       MSE: 210676.21109243698
+after 4500 epochs       MSE: 202019.7969747899
+after 4600 epochs       MSE: 191086.01546218488
+after 4700 epochs       MSE: 194096.33882352943
+after 4800 epochs       MSE: 242592.01075630254
+after 4900 epochs       MSE: 214189.90789915965
+after 5000 epochs       MSE: 181062.26016806724
+after 5100 epochs       MSE: 186442.82084033612
+after 5200 epochs       MSE: 176469.74924369747
+after 5300 epochs       MSE: 167978.06789915965
+after 5400 epochs       MSE: 170427.74050420168
+after 5500 epochs       MSE: 182392.90084033614
+after 5600 epochs       MSE: 156742.06655462185
+after 5700 epochs       MSE: 146882.4739495798
+after 5800 epochs       MSE: 143910.37848739495
+after 5900 epochs       MSE: 146982.65815126052
+after 6000 epochs       MSE: 149593.63226890756
+after 6100 epochs       MSE: 199700.52302521007
+after 6200 epochs       MSE: 130827.6705882353
+after 6300 epochs       MSE: 174269.16033613443
+after 6400 epochs       MSE: 129906.39327731093
+after 6500 epochs       MSE: 175544.49210084032
+after 6600 epochs       MSE: 134952.20705882352
+after 6700 epochs       MSE: 169450.97142857144
+after 6800 epochs       MSE: 133898.63798319327
+after 6900 epochs       MSE: 139109.23831932773
+after 7000 epochs       MSE: 112254.75226890756
+after 7100 epochs       MSE: 115838.14991596638
+after 7200 epochs       MSE: 108780.8968067227
+after 7300 epochs       MSE: 116217.84739495798
+after 7400 epochs       MSE: 112255.20403361344
+after 7500 epochs       MSE: 106218.53042016806
+after 7600 epochs       MSE: 110723.72168067227
+after 7700 epochs       MSE: 105043.53344537815
+after 7800 epochs       MSE: 98909.30016806723
+after 7900 epochs       MSE: 96229.00168067226
+after 8000 epochs       MSE: 99144.84168067227
+after 8100 epochs       MSE: 92531.98521008404
+after 8200 epochs       MSE: 94104.09411764705
+after 8300 epochs       MSE: 114505.88504201682
+after 8400 epochs       MSE: 93361.97378151261
+after 8500 epochs       MSE: 119429.32436974789
+after 8600 epochs       MSE: 94669.20873949579
+after 8700 epochs       MSE: 108427.12201680672
+after 8800 epochs       MSE: 116022.96470588236
+after 8900 epochs       MSE: 82318.89210084034
+after 9000 epochs       MSE: 101753.56773109244
+after 9100 epochs       MSE: 84302.22521008404
+after 9200 epochs       MSE: 87199.75260504203
+after 9300 epochs       MSE: 130466.42016806723
+after 9400 epochs       MSE: 90249.59462184874
+after 9500 epochs       MSE: 75646.32739495799
+after 9600 epochs       MSE: 81370.58957983194
+after 9700 epochs       MSE: 105563.7512605042
+after 9800 epochs       MSE: 88537.14823529412
+after 9900 epochs       MSE: 69260.40201680672
+after 10000 epochs      MSE: 68497.33915966387
+after 10100 epochs      MSE: 75501.26789915968
+after 10200 epochs      MSE: 67356.923697479
+after 10300 epochs      MSE: 69843.15159663865
+after 10400 epochs      MSE: 70145.36605042017
+after 10500 epochs      MSE: 99474.35025210083
+after 10600 epochs      MSE: 64045.364705882355
+after 10700 epochs      MSE: 62234.761680672265
+after 10800 epochs      MSE: 82520.33613445378
+after 10900 epochs      MSE: 73922.72134453781
+after 11000 epochs      MSE: 79238.21714285715
+after 11100 epochs      MSE: 62010.116302521004
+after 11200 epochs      MSE: 61649.054117647065
+after 11300 epochs      MSE: 80500.21109243696
+after 11400 epochs      MSE: 56539.64369747899
+after 11500 epochs      MSE: 55581.13882352941
+after 11600 epochs      MSE: 59727.85478991597
+after 11700 epochs      MSE: 71832.73949579832
+after 11800 epochs      MSE: 60543.54285714286
+after 11900 epochs      MSE: 58916.033613445376
+after 12000 epochs      MSE: 57996.47731092437
+after 12100 epochs      MSE: 53573.64168067227
+after 12200 epochs      MSE: 54648.20705882353
+after 12300 epochs      MSE: 52669.57983193277
+after 12400 epochs      MSE: 90471.54016806722
+after 12500 epochs      MSE: 49620.18957983193
+after 12600 epochs      MSE: 57435.39630252101
+after 12700 epochs      MSE: 49311.60201680672
+after 12800 epochs      MSE: 60271.6181512605
+after 12900 epochs      MSE: 72016.25277310924
+after 13000 epochs      MSE: 46760.71260504201
+after 13100 epochs      MSE: 53728.50554621849
+after 13200 epochs      MSE: 45076.04974789916
+after 13300 epochs      MSE: 67415.59394957982
+after 13400 epochs      MSE: 43596.16
+after 13500 epochs      MSE: 66369.50588235294
+after 13600 epochs      MSE: 52707.479663865546
+after 13700 epochs      MSE: 53996.95596638655
+after 13800 epochs      MSE: 47407.86554621849
+after 13900 epochs      MSE: 46267.2887394958
+after 14000 epochs      MSE: 40908.859159663865
+after 14100 epochs      MSE: 137055.0211764706
+after 14200 epochs      MSE: 41261.43462184874
+after 14300 epochs      MSE: 61468.36974789916
+after 14400 epochs      MSE: 41300.94789915966
+after 14500 epochs      MSE: 54894.650084033616
+after 14600 epochs      MSE: 40048.629243697476
+after 14700 epochs      MSE: 47716.0981512605
+after 14800 epochs      MSE: 40144.164033613444
+after 14900 epochs      MSE: 37508.42084033613
+after 15000 epochs      MSE: 38740.55529411765
+after 15100 epochs      MSE: 37542.811428571425
+after 15200 epochs      MSE: 53086.92974789916
+after 15300 epochs      MSE: 43133.52067226891
+after 15400 epochs      MSE: 37937.621512605045
+after 15500 epochs      MSE: 44557.73579831932
+after 15600 epochs      MSE: 40984.21243697479
+after 15700 epochs      MSE: 34588.886050420166
+after 15800 epochs      MSE: 41334.00201680673
+after 15900 epochs      MSE: 32921.15630252101
+after 16000 epochs      MSE: 36445.67394957983
+after 16100 epochs      MSE: 80065.37680672269
+after 16200 epochs      MSE: 34669.56907563026
+after 16300 epochs      MSE: 32470.94857142857
+after 16400 epochs      MSE: 42000.72605042017
+after 16500 epochs      MSE: 32574.49680672269
+after 16600 epochs      MSE: 37660.15462184874
+after 16700 epochs      MSE: 37096.250084033614
+after 16800 epochs      MSE: 36606.24134453781
+after 16900 epochs      MSE: 62756.48537815126
+after 17000 epochs      MSE: 31446.085378151263
+after 17100 epochs      MSE: 29811.6356302521
+after 17200 epochs      MSE: 36384.97882352942
+after 17300 epochs      MSE: 42357.337815126055
+after 17400 epochs      MSE: 29495.588571428572
+after 17500 epochs      MSE: 31642.89075630252
+after 17600 epochs      MSE: 105401.28806722688
+after 17700 epochs      MSE: 29635.815798319327
+after 17800 epochs      MSE: 30978.94722689076
+after 17900 epochs      MSE: 28256.629243697476
+after 18000 epochs      MSE: 28696.56201680672
+after 18100 epochs      MSE: 28044.896806722692
+after 18200 epochs      MSE: 57377.43058823529
+after 18300 epochs      MSE: 52179.57647058823
+after 18400 epochs      MSE: 28189.068907563025
+after 18500 epochs      MSE: 59162.17008403361
+after 18600 epochs      MSE: 26400.373781512604
+after 18700 epochs      MSE: 31284.087394957984
+after 18800 epochs      MSE: 26199.16369747899
+after 18900 epochs      MSE: 88646.10957983193
+after 19000 epochs      MSE: 27473.59731092437
+after 19100 epochs      MSE: 26348.756974789918
+after 19200 epochs      MSE: 25844.37781512605
+after 19300 epochs      MSE: 26118.652773109246
+after 19400 epochs      MSE: 35199.58319327731
+after 19500 epochs      MSE: 26696.863193277313
+after 19600 epochs      MSE: 54009.94957983193
+after 19700 epochs      MSE: 25066.202352941178
+after 19800 epochs      MSE: 26159.193277310926
+after 19900 epochs      MSE: 37683.393613445376
+after 20000 epochs      MSE: 24269.87025210084
+getting
+x_batch with size (1, 119, 1)
+y_batch with size (1, 119, 1)
+test rets shape  (120000, 121)
+prepare to save data
+finish to save data

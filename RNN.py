@@ -120,7 +120,7 @@ def embed_features(fea, x_batch, idx, n_batches, n_periods):
 
 
 hidden = 512             # number of neurons we will recursively work through,
-epochs = 20          # number of iterations or training cycles
+epochs = 20000          # number of iterations or training cycles
 repeats = 1          # number of iterations or training cycles
 learning_rate = 0.001  # small learning rate so we don't overshoot the minimum
 
@@ -232,7 +232,7 @@ with tf.Session() as sess:
 
 
 output = pd.DataFrame(data=output_data)
-output.sort_values(by='Id', inplace=True)
+# output.sort_values(by='Id', inplace=True)
 # print(output.head())
 output.to_csv(path_or_buf='data/output_' + str(epochs) + '.csv', index=False)
 print("finish to save data")
