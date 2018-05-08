@@ -21,9 +21,10 @@ rets = data.loc[:, 'Ret_MinusTwo':'Ret_PlusTwo'].values
 daily_weights = data['Weight_Daily'].values
 intraday_weights = data['Weight_Intraday'].values
 
-test_data = loaddata('test_2.csv', 1.0)
+test_data = loaddata('test_2.csv', 3.0)
 test_features = test_data.loc[:, 'Feature_1':'Feature_25'].values
 test_rets = test_data.loc[:, 'Ret_MinusTwo':'Ret_120'].values
+print("test rets shape ", test_rets.shape)
 
 #-------------------------------------------------------------------------------
 # preprocess
@@ -96,9 +97,9 @@ def get_batch(data, n_batches, n_periods, n_inputs=1, n_outputs=1):
 
 
 
-def embed_features(features, x_batch, idx, n_batches, n_periods):
-    batch_features = features[batch_idx]
-    print(batch_features.shape)
+def embed_features(fea, x_batch, idx, n_batches, n_periods):
+    batch_features = fea[idx]
+    # print("batch_features with shape", batch_features.shape)
     temp = np.zeros([n_batches, n_periods, batch_features.shape[1]])
     for j in range(x_batch.shape[0]):
         for kk in range(x_batch.shape[1]):
@@ -119,7 +120,7 @@ def embed_features(features, x_batch, idx, n_batches, n_periods):
 
 
 hidden = 512             # number of neurons we will recursively work through,
-epochs = 100          # number of iterations or training cycles
+epochs = 20          # number of iterations or training cycles
 repeats = 1          # number of iterations or training cycles
 learning_rate = 0.001  # small learning rate so we don't overshoot the minimum
 
@@ -183,12 +184,13 @@ with tf.Session() as sess:
     x_batch, y_batch, batch_idx = get_batch(rets_ts, num_batches, num_periods)
     x_batch = embed_features(
         features, x_batch, batch_idx, num_batches, num_periods)
+    
 
     y_pred = sess.run(outputs, feed_dict={X: x_batch})
     y_b = y_batch.reshape(-1)
     y_p = y_pred.reshape(-1)
-    print(y_b)
-    print(y_p)
+    # print(y_b)
+    # print(y_p)
     # plt.subplot(1, 2, 1)
     plt.plot(y_b, label='original')
     plt.plot(y_p, label='predicted')
@@ -198,25 +200,43 @@ with tf.Session() as sess:
     plt.savefig("img/rnn_sample_run_res.png")
     plt.clf()
 
-    num_batches = test_rets.shape[0]
-    data = test_rets
+    output_data = [] 
+    num_batches = test_rets_ts.shape[0]
+    data = test_rets_ts
+    print("test rets shape ", test_rets.shape)
+    print("prepare to save data")
     for i in range(100):
-        idx = range(i * int(num_batches/100), (i+1) * int(num_batches/100))
+        idx = np.arange(i * int(num_batches/100), (i+1) * int(num_batches/100))
         x_batch = data[idx, :num_periods]
         y_batch = data[idx, -num_periods:]
 
         x_batch = x_batch.reshape(-1, num_periods, num_inputs)
         y_batch = y_batch.reshape(-1, num_periods, num_outputs)
 
+        # print('111t', test_features.shape, idx.shape)
         x_batch = embed_features(test_features, x_batch, idx, int(num_batches/100), num_periods)
 
         y_pred = sess.run(outputs, feed_dict={X: x_batch}).reshape(-1, num_periods)
-        np.savez_compressed('y_pred_' + str(i) + '.npz', data=y_pred)
-        print(y_pred.shape)
-    # for i in range(rets.shape[0]):
-    #     rets_minus[i] *= daily_weights[i]
-    #     rets_plus[i] *= daily_weights[i]
-    #     rets_ts[i] *= intraday_weights[i]
+        # np.savez_compressed('y_pred_' + str(i) + '.npz', data=y_pred)
+        # print(y_pred.shape)
+        y_pred = y_pred[:, -60:]
+        for i in range(62):  # t=121 to 180, and D+1, D+2
+            for stock_id in idx:
+                if i >= 60:
+                    output_data.append(
+                        {'Id': str(stock_id + 1) + '_' + str(i+1), 'Predicted': 0})
+                else:
+                    # print(stock_id)
+                    output_data.append(
+                        {'Id': str(stock_id + 1) + '_' + str(i+1), 'Predicted': y_pred[stock_id % len(idx), i] / 1.5e6})
+
+
+output = pd.DataFrame(data=output_data)
+output.sort_values(by='Id', inplace=True)
+# print(output.head())
+output.to_csv(path_or_buf='data/output_' + str(epochs) + '.csv', index=False)
+print("finish to save data")
+
 
 epochs = np.arange(epochs * repeats)
 mses = np.array(mses)
@@ -230,6 +250,3 @@ plt.ylabel("MSE/10^5")
 plt.savefig("img/rnn_sample_run_mse.png")
 
 plt.show()
-
-# Prepare to save data
-print("prepare to save data")
